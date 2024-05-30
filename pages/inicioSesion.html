@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Inicio sesion</title>
+        <link rel="stylesheet" type="text/css" href="../styles/estilos.css">
+        <link rel="stylesheet" type="text/css" href="../styles/mediaqueries.css">
+        <link rel="stylesheet" type="text/css" href="../styles/formularios.css">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/5f3487e788.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <header>
+            <section class="cabecera">
+                <!-- Logo Moonshadow -->
+                <section class="imgLogo_container">
+                    <a href="../index.html">
+                    <img class="imgLogo" href="../index.html" src="../images/MoonshadowLogo-10-28.png" ></img></a>
+                </section>      
+                
+                <section class="iconos_superiores">
+                    <!-- Carrito de la compra -->
+                    <img class="carrito" src="../images/carrito.png" ></img>
+        
+                    <!-- Botón de inicio de sesión -->
+                    <img class="avatar" src="../images/avatar.png" ></img> 
+                </section>
+            </section>
+    
+            <!-- Menú del nav -->
+            <section class="menu_cont">
+                <input type="checkbox" id="check" class="check_hamburguesa">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars fa-2xl"></i>
+                </label>
+                <nav id="menu" class="menu_principal">
+                    <ul>
+                        <li class="nivel1"><a href="#" class="nivel1"> Inicio </a>
+                        </li>
+                        <li class="nivel1"><a href="#" class="nivel1">Tienda</a>
+                            <ul class="nivel2">
+                                <li><a href="#">Productos</a></li>
+                                <li><a href="#">Opiniones</a></li>
+                            </ul>
+                        </li>
+                        <li class="nivel1"><a href="#" class="nivel1">Servicios</a>
+                            <ul class="nivel2">
+                                <li><a href="#">Eventos</a></li>
+                                <li><a href="#">Reportajes</a></li>
+                                <li><a href="#">Fotos de estudio</a></li>
+                                <li><a href="#">Exposiciones</a></li>
+                                <li><a href="#">Cursos</a></li>
+                            </ul>
+                        </li>
+                        <li class="nivel1"> <a href= "#"> Acerca de nosotros </a> </li>
+                        <li class="nivel1"> <a href= "#"> Contacto </a> </li>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+
+        <main>
+            <!-- Formulario -->
+            <form class="form-login" id="inicio">
+                <h5>Inicio sesion</h5>
+                <input class="controls" type="text" name="usuario" value="" placeholder="Usuario" autocomplete="off" autofocus />
+                <input class="controls" type="password" name="contrasena" value="" placeholder="Contraseña" />
+                <input class="buttons" type="submit" name="" value="Entrar" />
+                <p><a href="registrarse.html">¿Aún no te registraste?</a></p>
+            </form>
+        </main>
+
+        <footer>
+            <!-- Opiniones de clientes -->
+            <section class="opiniones">
+                <section class="opinion">
+                    <p>"Muy buena experiencia. Nos hicieron un reportaje que nos encantó".</p>
+                    <h3>Ariela López</h3>
+                </section>
+                <section class="opinion">
+                    <p>"Compré un albúm de fotos y se ve de muy buena calidad".</p>
+                    <h3> Nicole Moya </h3>
+                </section>
+                <section class="opinion">
+                    <p>"Los elegimos para hacer el reportaje de nuestra boda y fue un gran acierto".</p>
+                    <h3> José Montes </h3>
+                </section>
+                <section class="opinion">
+                    <p>"Nos hicieron el reportaje de bautizo de nuestro hijo y quedó precioso".</p>
+                    <h3> Daniela Mella </h3>
+                </section>
+            </section> 
+    
+            <section class="finalPagina">
+                <!-- Logo -->
+                <img class="imgLogo" src="../images/MoonshadowLogo-10-28.png" ></img>
+            
+                <!-- Copyright -->
+                <p class="copyright"> &copy;2023 por Moonshadow</p>
+                
+                <!-- Redes sociales -->
+                <section class="redes">
+                    <i class="fa-brands fa-facebook fa-2xl"></i>
+                    <i class="fa-brands fa-instagram fa-2xl"></i>
+                    <i class="fa-brands fa-linkedin fa-2xl"></i>
+                    <i class="fa-brands fa-whatsapp fa-2xl"></i>
+                </section>
+            </section>
+        </footer>
+    </body>
+</html>

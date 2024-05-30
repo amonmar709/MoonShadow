@@ -1,0 +1,352 @@
+
+/*** Tablet ***/
+@media (min-width:601px) and (max-width:1200px){
+    
+    header {
+        .cabecera {
+            padding:40px 0 60px;
+
+            .iconos_superiores{
+                right: 20px;
+            }
+            
+        }
+
+        .menu_principal {
+            width: 100%;
+            height: 100%;
+            background-color: grey;
+            
+        }
+
+        /** Menú hamburguesa **/
+        .menu_cont {
+            
+            .checkbtn {
+                display: block;
+                margin-left: 20px;   
+                margin-top: -90px;
+                position: absolute;
+            }
+
+            #check:checked ~ .menu_principal {
+                left: 0; /* Mueve el menú a la vista cuando el checkbox esté marcado */
+                height: 100%;
+                width: 470px;
+            }
+    
+            /*** NAV ***/
+            nav{               
+                height: 100%;
+                width: 470px;
+                text-align:center;
+                position: fixed;
+                width: 152px;
+                left:-100%;
+                transition: left 0.4s;
+                z-index: 100;
+                padding-top: 0;
+
+            }
+    
+            nav ul{
+                list-style: none;
+                display: inline-block;
+            }
+    
+            nav ul li{
+                float: left;
+            }
+    
+            nav ul li a{
+                display: inline-block;
+                font-size: 16px;
+                text-decoration: none;
+                padding: 12px 42px 0px 50px;
+            }
+
+            #menu ul{
+            list-style-type: none;
+            border-top: none;
+            }
+
+            #menu ul li{
+                width: 100%;
+            }
+
+            #menu ul li:hover  ul.nivel2, #menu ul li a:hover  ul.nivel2{
+                display: none;
+            }
+
+        }
+    }
+
+    main {
+
+        span.error{
+            display: none;
+            position: fixed;
+            margin-left: 0.2px;
+            margin-top: 0.2px;
+            width: 200px;
+            height: 130px;
+            border: solid 1px black;
+            background-color: white;
+            color: black;
+            padding: 3px;
+            text-align: center;
+        }
+
+        input:focus:invalid + span.error{
+            display: block;
+        }
+
+        .video_principal {        
+            .video_text {
+                /*** Párrafo de texto del video principal ***/
+                p {
+                    width: 80%;
+                }
+            }
+        }
+
+        /** Galeria 1 **/
+        .galeria1{
+            margin-bottom: 60px;
+            /*** Titulo Galería 1***/
+            .galeriaH1 {
+                margin-top: 0;
+            }
+        }
+
+        /** Nuestros servicios (Eventos, reportajes, fotos de estudio, exposiciones y cursos) **/
+        .galeria2 {
+            .texto_izquierda_img_derecha {
+                height: 300px;
+
+                h1 {
+                    padding-top: 100px;
+                    font-size: 45px;
+                }
+            }
+            .texto_derecha_img_izquierda {
+                height: 300px;
+
+                h1 {
+                    padding-top: 100px;
+                    font-size: 45px;
+                }
+            }
+        }
+
+        .opciones_section {
+            .opcion {
+                padding-top: 60px;
+    
+                
+                p {
+                    margin: 10px 20px 10px;
+                }
+            }
+        }
+    }   
+
+        
+    /*** FOOTER ***/
+    footer {
+        .opiniones {
+            .opinion {        
+                p {
+                    margin: 0 20px 50px;
+                }
+            }
+        }
+
+    }    
+}   
+
+
+
+/*** Movil ***/
+@media (max-width: 600px) {
+    
+    header {
+        .cabecera {
+            padding:50px 0px 60px;
+            .iconos_superiores{
+                right: 20px;
+            }
+        }
+        .menu_principal {
+            width: 100%;
+            height: 100%;
+            background-color: grey;
+        }
+        
+        /** Menú hamburguesa **/
+        .menu_cont {
+            .checkbtn {
+                display: block;
+                margin-left: 20px;   
+                margin-top: -90px;
+                position: absolute;
+            }
+
+            #check:checked ~ .menu_principal {
+                left: 0; /* Mueve el menú a la vista cuando el checkbox esté marcado */
+                height: 100%;
+                width: 100%;
+            }
+    
+            /*** NAV ***/
+            nav{
+                text-align:center;
+                position: fixed;
+                width: 100%;
+                margin-top:-30px;
+                left:-100%;
+                transition: left 0.4s;
+                z-index: 100;
+                padding-top: 0;
+            }
+    
+            nav ul{
+                list-style: none;
+                display: inline-block;
+                width: 100%;
+            }
+    
+            nav ul li{
+                float: left;
+            }
+    
+            nav ul li a{
+                display: inline-block;
+                font-size: 16px;
+                text-decoration: none;
+                padding: 12px 42px 0px 50px;
+            }
+
+            #menu ul {
+                border-top: none;
+            }
+
+            #menu ul li {
+                width: 100%;
+            }
+            #menu ul li:hover  ul.nivel2, #menu ul li a:hover  ul.nivel2{
+                display: none;
+            }
+
+        }
+    }
+
+    main {
+
+        span.error{
+            display: none;
+            position: fixed;
+            margin-left: 0.2px;
+            margin-top: 0.2px;
+            width: 200px;
+            height: 130px;
+            border: solid 1px black;
+            background-color: white;
+            color: black;
+            padding: 3px;
+            text-align: center;
+        }    
+        
+
+        input:focus:invalid + span.error{
+            display:block;
+        }
+    
+        .video_principal {  
+            height: 620px;  
+            .video_text {
+                /*** Titulo del texto del video principal ***/
+                h2 {
+                    padding: 80px 0  0 60px;
+                }
+        
+                /*** Párrafo de texto del video principal ***/
+                p {
+                    width: 100%;
+                }
+            }
+    
+        }
+
+         /** Galeria 1 **/
+        .galeria1{
+            margin-bottom: 20px;
+
+            .galeriaH1 {
+                margin-top: 0;
+            }
+
+            img{
+                display: block;
+                width: 80%;
+                margin-left:10%;
+                height: 35%;
+                padding-top: 25px;
+                padding-bottom: 5px;
+            }
+        }
+
+        /*** Video secundario ***/
+        .video2_container {
+            height: 222px;   
+        }
+
+        /** Nuestros servicios (Eventos, reportajes, fotos de estudio, exposiciones y cursos) **/
+        .galeria2 {
+            .texto_izquierda_img_derecha {
+                height: 200px;
+
+                h1 {
+                    padding-top: 70px;
+                    font-size: 30px;
+                    width: 50%;
+                }
+                img {
+                    width: 50%;
+                }
+            }
+            .texto_derecha_img_izquierda {
+                height: 200px;
+
+                h1 {
+                    padding-top: 70px;
+                    font-size: 30px;
+                    width: 50%;
+                }
+                img {
+                    width: 50%;
+                }
+            }
+        }
+        
+        .opciones_section {
+            .opcion {
+                width: 100% ;
+                height: 260px;
+                padding-top: 50px;
+            }
+        }
+    }
+
+        
+    /*** FOOTER ***/
+    footer {
+        .opiniones {
+            align-items: center;
+            flex-direction: column;
+        }
+
+    } 
+    
+
+}

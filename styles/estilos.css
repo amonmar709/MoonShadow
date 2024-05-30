@@ -1,0 +1,411 @@
+/*** Reseteo propiedades ***/
+* {
+    padding : 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Gloock', serif;
+}
+
+/*** BODY ***/
+body {
+    position: relative;
+    background-color: white;
+}
+
+/*** HEADER ***/
+header {
+    position: relative;  
+
+    .cabecera {
+        padding-top:50px;
+
+        /** Iconos del carrito y el avatar **/
+        .iconos_superiores{
+            position: absolute;      
+            right: 50px;
+            top: 57px; 
+
+            .avatar{
+                width: 35px;
+                height: 35px;
+            }
+            .carrito{
+                width: 35px;
+                height: 35px;
+            }
+        } 
+        
+         /** Logo principal (Moonshadow) **/ 
+        .imgLogo_container {
+            margin:  auto;  
+            height: 48px;
+            text-align: center;
+        }
+        
+        .imgLogo {
+            width: 271px;
+            height: 48px;
+        }
+    }
+
+    .menu_cont {
+        /** Menú hamburguesa **/
+        .check_hamburguesa{
+            display: none;
+        }
+        .checkbtn{
+            display:none;
+        } 
+
+        /*** NAV ***/
+        nav{
+            padding-top: 8px;
+            height: 60px;
+            text-align:center;
+            transition: left 0.4s;
+        }
+
+        nav ul{
+            list-style: none;
+            display: inline-block;
+        }
+
+        nav ul li{
+            float: left;
+        }
+
+        nav ul li a{
+            display: inline-block;
+            font-size: 16px;
+            text-decoration: none;
+            padding: 12px 42px 0px 50px;
+        }
+
+        /*** Propiedades generales del menú ***/
+        
+        #menu nav {
+            text-align: center;
+            font-size: 0.9em;
+            width: 540px;
+            margin: 20px auto;
+        }
+
+        #menu ul {
+            list-style-type: none;
+            border-top: solid 2px #fff;
+        }
+        
+        #menu ul li {
+            width: 162px;
+        }
+
+        #menu ul li a {
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            background-color: grey;
+            padding: 10px;
+            position: relative;
+        }
+        
+        #menu ul li ul li a {
+            width: 160px;
+            border-top-color: transparent;
+        }
+
+        #menu ul li ul {
+            display: none;
+            z-index: 100;
+        }
+
+        /*** Propiedades específicas del menú ***/
+        
+        #menu ul li ul li ul li a.primera {
+            border-top-color: #fff;
+        }
+
+        #menu ul li.nivel1 { 
+            float: left;
+            margin-right: 1px;
+        }
+        
+        #menu ul li a.nivel2 {
+            color: #000;
+        }
+        
+        #menu ul li a.nivel1, #menu ul li a.nivel2 {
+            display: block;
+        }
+
+        /*** Propiedad hover del menú ***/
+        
+        #menu ul li:hover {
+            position: relative;
+        }
+
+        #menu ul li a:hover, #menu ul li:hover a.nivel1 {
+            background-color: black;
+            color: white;
+        }
+        
+        #menu ul li:hover  ul.nivel2, #menu ul li a:hover  ul.nivel2{
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0px;
+        }
+
+        #menu ul li ul li a:hover ul.nivel3, #menu ul li ul li:hover ul.nivel3 {
+            display: block;
+            left: 161px;
+            top:0px;
+        }
+
+        #menu ul li ul li a:hover {
+            color: #fff;
+            background-color: black;
+            position: relative;
+        }
+
+    }
+}
+
+/*** MAIN ***/
+main {
+    position: relative;
+    text-align: center;
+    height: max-content;
+    display:flex;
+    flex-direction: column;
+
+    /** Video principal de bola rodante **/
+    .video_principal {
+        text-align: justify;
+        
+        .video {
+            border-color:gray;
+            border-width: 5px 0 0 0;
+            border-style:inset;
+            width: 100%; 
+            height: 580px;
+            object-fit: cover;
+            z-index:-1;
+            position: absolute;
+        }
+
+        .video_text {
+            height: 650px;
+            
+            /*** Titulo del texto del video principal ***/
+            h2 {
+                text-align: left;
+                justify-content: center;
+                padding: 220px 0  0 60px;
+                color: white;
+                font-size:50px;
+            }
+    
+            /*** Párrafo de texto del video principal ***/
+            p {
+                padding: 10px 60px;
+                justify-content: center;
+                width: 840px;
+                color: white;
+                font-size: 18px;
+            }
+        }
+    }
+
+    /** Galeria 1 **/
+    .galeria1{
+        margin-bottom: 120px;
+        
+        .galeriaH1 {
+            margin-top: 25px;
+            margin-bottom: 20px;
+            top: 40px;
+            font-size: 40px;
+            font-style: bold;
+        }
+        
+        img{
+            display: inline-block;
+            width: 45%;
+            height: auto;
+            margin: 10px;
+            margin-top: 25px;
+        }
+    }
+
+    /*** Video secundario ***/
+    .video2_container {
+        height: 400px;
+        width: 100%;
+        
+        .video2 {
+            border-color:gray;
+            border-width: 5px;
+            border-style:inset;        
+            width: 100%; 
+            height: 100%;
+            object-fit: cover;  
+        }
+    }
+
+    /** Nuestros servicios (Eventos, reportajes, fotos de estudio, exposiciones y cursos) **/
+    .galeria2 {
+        height: max-content;
+
+        .texto_izquierda_img_derecha {
+            float: left;
+            width: 100%;
+            height: 500px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            
+            h1{
+                float: left;
+                font-size: 60px;
+                text-align: center;
+                padding-top: 200px;
+                height: 100%;
+                width: 70%;
+            }
+
+            img {
+                float: right;
+                height: 100%;
+                width: 30%;
+            }
+        }
+        .texto_derecha_img_izquierda {
+            float: right;
+            width: 100%;
+            height: 500px;
+            background-color: white;
+            color: black;
+            text-align: center;
+
+            h1 {
+                float: right;
+                font-size: 60px;
+                text-align: center;
+                padding-top: 200px;
+                height: 100%;
+                width: 70%;
+            }
+
+            img {
+                float: left;
+                height: 100%;
+                width: 30%;
+            }
+        }
+    }
+
+    /** Opciones del menú final del main (ideas, blog, diseño, consulta **/
+    .opciones_section {
+        width: 100%;
+
+        .opcion {
+            float: left;
+            width: 25%;
+            height: 325px;
+            color: black;
+            padding-top: 80px;
+
+            img {
+                height: 50px;
+                width: 10%;
+            }
+
+            h3 {
+                margin-top: 10px;
+            }
+            
+            p {
+                text-align: center;
+                justify-content: center;
+                margin: 10px 100px 10px;
+            }
+        }
+
+        .opcion1 {
+            background: rgb(214, 205, 205);
+        }
+        
+        .opcion2 {
+            background: grey;
+        }
+    
+        .opcion3 {
+            background: rgb(233, 226, 226);
+        }
+    
+        .opcion4 {
+            background: rgb(85, 78, 78);
+        }
+    }
+} 
+
+/*** FOOTER ***/
+footer {
+    padding-top:40px;
+    position: relative;
+    float:inline-end;
+    height:max-content;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+
+    /** Opiniones de los clientes **/
+    .opiniones {
+        display: flex;
+        justify-content: center;
+        gap:20px;
+
+        .opinion {
+            background: black;
+            color: white;
+            width: 240px;
+            height: 215px;
+            padding-top: 40px;
+    
+            p {
+                height: 50%;
+                margin: 0 50px 50px;
+            }
+        }
+    }
+
+    /** Logo final de la página, copyright y redes sociales **/ 
+    .finalPagina {
+        margin-top:40px;
+        margin-bottom: 50px;
+
+        .imgLogo {
+            width: 271px;
+            height: 48px;
+            margin:  auto;  
+            height: 48px;
+            text-align: center;
+        }  
+
+        .copyright 
+        {
+            padding: 20px 95px;
+            line-height: 1.79em;
+            font-size: 14px;
+            letter-spacing: normal;
+        }
+    
+        .redes {
+            i{
+                margin: 0 5px;
+            }
+        }
+    }
+}    

@@ -1,0 +1,160 @@
+/*** Reseteo propiedades ***/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gloock', serif;
+}
+
+
+/*** Body ***/
+body{
+    background-color: white;
+    position: relative;
+}
+/*** Main ***/
+main{
+
+    .buttons {
+        width: 100%;
+        height: 40px;
+        font-size: 14px;
+        font-weight: bold;
+        background-color: rgb(177, 174, 174);
+        color: black;
+        border: none;
+        margin-top: 20px;
+    }
+
+    .error {
+        display: none;
+        position: fixed;
+        margin-left: 380px;
+        margin-top: -59px;
+        width: 200px;
+        height: 135px;
+        border: solid 1px black;
+        background-color: white;
+        color: black;
+        padding: 3px;
+        text-align: center;
+    }
+
+    input:focus:invalid + .error{
+        display: block;
+    }  
+
+    #inicio{
+        width: 400px;
+        height: 320px;
+    }
+    
+    .controls{
+        width: 100%;
+        border: 1px solid white;
+        margin-bottom: 15px;
+        padding: 11px 10px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .form-login{
+        width: 400px;
+        height: 500px;
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        box-shadow: 7px 13px 37px #000;
+        padding: 20px 30px;
+        background: black;
+        color: white;
+        border-top: 4px solid #000;
+
+    }
+
+    .form-login p {
+        height: 40px;
+        text-align: center;
+        padding-top: 10px;
+        margin-top: 10px;
+    }
+    
+    .form-login a {
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    
+    .form-login a:hover{
+        text-decoration: underline;
+    }
+    
+    .form-login h5 {
+        margin: 0;
+        text-align: center;
+        height: -10px;
+        margin-top: 2px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid;
+        font-size: 20px;
+    }
+
+    .check-icon {
+        position: absolute;
+        margin-top: -43px;
+        margin-left: 318px;
+    }
+
+    .success-icon {
+        color: green;
+        display: none;
+    }
+    
+    .error-icon {
+        color: red;
+        display: none; 
+    }
+    
+    input:valid ~ .check-icon .success-icon {
+        display: inline;
+    }
+    
+    input:invalid ~ .check-icon .error-icon {
+        display: inline;
+    }
+    
+    a {
+        display: inline-block;
+        position: relative;
+        color: #333;
+        text-decoration: none;
+        padding: 0 4px;
+    }
+
+    a {
+        display: inline-block;
+        position: relative;
+        color: white;
+        text-decoration: none;
+        transition: all .5s ease;
+        transform-style: preserve-3d;
+        }
+
+    a:after {
+    content: "Pulsa aquí";
+    position: absolute;
+    top: -100%;
+    left: 0px;
+    width: 100%;
+    background: black;
+    transform-origin: left bottom;
+    transform: rotateX(90deg);
+    }
+    
+    a:hover {
+    transform-origin: center bottom;
+    transform: rotateX(-90deg) translateY(100%);
+    }
+}
