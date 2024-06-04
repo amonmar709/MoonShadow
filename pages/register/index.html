@@ -2,32 +2,32 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Inicio sesion</title>
-        <link rel="stylesheet" type="text/css" href="../styles/estilos.css">
-        <link rel="stylesheet" type="text/css" href="../styles/mediaqueries.css">
-        <link rel="stylesheet" type="text/css" href="../styles/formularios.css">
+        <title>Registrarse</title>
+        <link rel="stylesheet" type="text/css" href="../../styles/estilos.css">
+        <link rel="stylesheet" type="text/css" href="../../styles/mediaqueries.css">
+        <link rel="stylesheet" type="text/css" href="../../styles/formularios.css">
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/5f3487e788.js" crossorigin="anonymous"></script>
-
+        
     </head>
     <body>
         <header>
             <section class="cabecera">
                 <!-- Logo Moonshadow -->
                 <section class="imgLogo_container">
-                    <a href="../index.html">
-                    <img class="imgLogo" href="../index.html" src="../images/MoonshadowLogo-10-28.png" ></img></a>
+                    <a href="../../index.html" >
+                    <img class="imgLogo" href="../../index.html" src="../../images/MoonshadowLogo-10-28.png" ></img></a>
                 </section>      
                 
                 <section class="iconos_superiores">
                     <!-- Carrito de la compra -->
-                    <img class="carrito" src="../images/carrito.png" ></img>
+                    <img class="carrito" src="../../images/carrito.png" ></img>
         
                     <!-- Botón de inicio de sesión -->
-                    <img class="avatar" src="../images/avatar.png" ></img> 
+                    <img class="avatar" src="../../images/avatar.png" ></img> 
                 </section>
             </section>
     
@@ -65,12 +65,39 @@
 
         <main>
             <!-- Formulario -->
-            <form class="form-login" id="inicio">
-                <h5>Inicio sesion</h5>
-                <input class="controls" type="text" name="usuario" value="" placeholder="Usuario" autocomplete="off" autofocus />
-                <input class="controls" type="password" name="contrasena" value="" placeholder="Contraseña" />
-                <input class="buttons" type="submit" name="" value="Entrar" />
-                <p><a href="registrarse.html">¿Aún no te registraste?</a></p>
+            <form class="form-login" novalidate>
+                <h5>Registrarse</h5>
+                <section>
+                    <input id="usuario" class="controls" type="text" name="usuario" value="" placeholder="Usuario" autocomplete="off" autofocus required />
+                    <section class = "check-icon">
+                        <span class="fa fa-check success-icon"></span>
+                        <span class="fa fa-times error-icon"></span>
+                    </section>
+                </section>
+                <section>
+                    <input id="password" class="controls" type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[a-zA-Z\d#$@!%&*?]{8,16}$" name="contrasena" value="" placeholder="Contraseña" required />
+                    <span class="error">La contraseña debe contener: carácteres especiales ($@!%&*?#), dígitos, alguna minúscula, alguna mayúscula, y entre 8 y 16 carácteres.</span>
+                    <section class = "check-icon">
+                        <span class="fa fa-check success-icon"></span>
+                        <span class="fa fa-times error-icon"></span>
+                    </section> 
+                </section>
+                <section>
+                    <input id="repitePass" class="controls" type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[a-zA-Z\d#$@!%&*?]{8,16}$" name="contrasena" value="" placeholder="Repite la contraseña" autocomplete="off" required/>
+                    <section class = "check-icon">
+                        <span class="fa fa-check success-icon"></span>
+                        <span class="fa fa-times error-icon"></span>
+                    </section>
+                <section>
+                    <input id="email" class="controls" type="email" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}" size="30" name="correo" value="" placeholder="Email" required />
+                    <section class = "check-icon">
+                        <span class="fa fa-check success-icon"></span>
+                        <span class="fa fa-times error-icon"></span>
+                    </section> 
+                </section>
+                <p><input type="checkbox" name="checkbox" id="checkbox" value="checkbox" class="checkbox" required /> Acepto los términos y condiciones </p>
+                <input class="buttons" type="submit" id="registrarse" name="" value="Registrarse" onclick="validarFormulario(event)" />
+                <p><a href="../session/index.html">¿Ya estás registrado?</a></p>
             </form>
         </main>
 
@@ -97,7 +124,7 @@
     
             <section class="finalPagina">
                 <!-- Logo -->
-                <img class="imgLogo" src="../images/MoonshadowLogo-10-28.png" ></img>
+                <img class="imgLogo" src="../../images/MoonshadowLogo-10-28.png" ></img>
             
                 <!-- Copyright -->
                 <p class="copyright"> &copy;2023 por Moonshadow</p>
@@ -110,6 +137,10 @@
                     <i class="fa-brands fa-whatsapp fa-2xl"></i>
                 </section>
             </section>
+
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- Llamada a la libreria sweetalert-->
+            <script src="../../js/app.js"></script> <!-- Llamada al código JavaScript -->   
+
         </footer>
     </body>
 </html>
